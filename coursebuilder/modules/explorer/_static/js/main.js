@@ -34,6 +34,8 @@ window.addEventListener('WebComponentsReady', function documentReady() {
   function showPage(pageName) {
     $('.page-wrapper').hide();
     $('#' + pageName).show();
+    $('.home-main-menu a').removeClass('active-link');
+    $('.home-main-menu a[href="#!' + pageName + '"]').addClass('active-link');
   }
 
   var pageLinks = ['explorer', 'certification', 'homepage', 'tools', 'partners', 'feedback', 'faqs', 'events'];
